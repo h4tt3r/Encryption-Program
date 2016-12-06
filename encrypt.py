@@ -23,7 +23,7 @@ alphabet = [' ' ,'a', 'b', 'c',
 			
 clearMesList = []
 numList = []
-
+numList2 = [] 
 #Puts all characters in the clear message into a list 
 for x in clearMes:
 	clearMesList.append(x)
@@ -42,8 +42,12 @@ for x in clearMesList:
 	#Adds now converted character to numList 
 	numList.append(y)
 
-numList2 = [] 
+
+
+#Sets encryption key to a random number 1-500
 encryptionKey = random.randint(1,500)
+
+
 #Does math to all the coverted characters
 for x in numList:
 	x = x + 1000
@@ -68,6 +72,7 @@ encryptedstring = "".join(numList2)
 print "\nEncrypted message:\n" + encryptedstring
 
 encryptionKey = str(encryptionKey)
+
 print "Your encryption key is: " + encryptionKey 
 
 
